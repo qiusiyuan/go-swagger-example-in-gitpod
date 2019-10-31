@@ -1,0 +1,6 @@
+# The Docker image to run your workspace in. Defaults to gitpod/workspace-full
+image:
+    file: .gitpod.dockerfile
+# Command to start on workspace startup (optional)
+
+# Ports to expose on workspace startup (optional)

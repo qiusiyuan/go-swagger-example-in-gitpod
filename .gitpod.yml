@@ -1,6 +1,8 @@
 # The Docker image to run your workspace in. Defaults to gitpod/workspace-full
 image:
     file: .gitpod.dockerfile
-# Command to start on workspace startup (optional)
 
+# Change checkout location to match for GOPATH
+checkoutLocation: "go/src/"
+workspaceLocation: "go/src/"
 # Ports to expose on workspace startup (optional)

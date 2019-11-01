@@ -3,6 +3,6 @@ image:
     file: .gitpod.dockerfile
 
 # Change checkout location to match for GOPATH
-checkoutLocation: "go/src/"
+checkoutLocation: "go/src/go-swagger-example-in-gitpod/"
 workspaceLocation: "go/src/"
 # Ports to expose on workspace startup (optional)

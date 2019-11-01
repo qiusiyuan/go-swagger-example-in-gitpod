@@ -6,3 +6,7 @@ image:
 checkoutLocation: "go/src/go-swagger-example-in-gitpod/"
 workspaceLocation: "go/src/go-swagger-example-in-gitpod/"
 # Ports to expose on workspace startup (optional)
+
+tasks:
+ - init: swagger generate server -f swagger.yml && go get ./...
+ - command: go install ./cmd/a-todo-list-application-server/ && $GOPATH/bin/a-todo-list-application-server --port 8765

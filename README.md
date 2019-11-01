@@ -31,7 +31,7 @@ Please wait for all the process done, you will see a message below to indicate t
 ```
 2019/11/01 18:24:29 Serving a todo list application at http://127.0.0.1:8765
 ```
-3. Now you can play with the server, choose `Terminal` on the top of the window and choose `New Terminal`.
+4. Now you can play with the server, choose `Terminal` on the top of the window and choose `New Terminal`.
 ![test3](https://user-images.githubusercontent.com/17970730/68048427-ef447800-fcb6-11e9-83dc-af22016737e3.png)
 
 With opened new terminal, you can now play with it using curl.
@@ -52,6 +52,20 @@ curl -i localhost:8765/1 -X DELETE -H 'Content-Type: application/io.goswagger.ex
 curl -i localhost:8765/2 -X PUT -H 'Content-Type: application/io.goswagger.examples.todo-list.v1+json' -d '{"description":"go shopping"}'
 ```
 Refer to [simple server tutorial](https://goswagger.io/tutorial/todo-list.html) for more info.
+
+5. You can stop the server in the first terminal, `Ctrl + c` to terminate the server. The server binary is located in the `$GOPATH/bin/`
+
+You may want to change some of the code to play with. The **core** code resides in `restapi/configure_a_todo_list_application.go`
+
+To restart the server, you can either
+1. Install binary and run
+```bash
+go install ./cmd/a-todo-list-application-server/ && $GOPATH/bin/a-todo-list-application-server --port 8765
+```
+2. Run the main directly
+```bash
+go run ./cmd/a-todo-list-application-server/main.go --port 8765
+```
 
 ### 2. Clone and Setup
 1. Firstly make sure you have go setup in your PC.

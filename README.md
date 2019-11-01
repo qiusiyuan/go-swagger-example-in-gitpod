@@ -21,7 +21,8 @@ I really suggest to using gitpod directly, this is simple and stable. If you wou
 
 ### 1. gitpod
 1. Click this link [gitpod for go-swagger-example](https://gitpod.io/#https://github.com/qiusiyuan/go-swagger-example-in-gitpod), and follow the instruction of login if you haven't used gitpod before.
-2. Once open the workspace, terminals opened by gitpod will automatically
+2. Wait for process done, it will take 1-2 min for the first time access.
+3. Once the workspace is opened, terminals opened by gitpod will automatically
 * Swagger generate server code from `swagger.yml`
 * `go` get all the dependencies
 * `go` install the server

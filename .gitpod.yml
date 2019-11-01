@@ -9,4 +9,4 @@ workspaceLocation: "go/src/go-swagger-example-in-gitpod/"
 
 tasks:
  - init: swagger generate server -f swagger.yml && go get ./...
- - command: go install ./cmd/a-todo-list-application-server/ && $GOPATH/bin/a-todo-list-application-server --port 8765
+   command: go install ./cmd/a-todo-list-application-server/ && $GOPATH/bin/a-todo-list-application-server --port 8765

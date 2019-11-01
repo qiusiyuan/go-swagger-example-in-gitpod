@@ -1,6 +1,8 @@
 FROM gitpod/workspace-full:latest
 
 USER root
+
+RUN mkdir /workspace/go/bin && mkdir /workspace/go/pkg
 ## Install go-swagger
 RUN download_url=$(curl -s https://api.github.com/repos/go-swagger/go-swagger/releases/latest | \
   jq -r '.assets[] | select(.name | contains("'"$(uname | tr '[:upper:]' '[:lower:]')"'_amd64")) | .browser_download_url') \

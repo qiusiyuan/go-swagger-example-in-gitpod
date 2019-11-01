@@ -4,5 +4,5 @@ image:
 
 # Change checkout location to match for GOPATH
 checkoutLocation: "go/src/go-swagger-example-in-gitpod/"
-workspaceLocation: "go/src/"
+workspaceLocation: "go/src/go-swagger-example-in-gitpod/"
 # Ports to expose on workspace startup (optional)

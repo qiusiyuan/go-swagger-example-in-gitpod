@@ -9,7 +9,6 @@ produces:
 - application/io.goswagger.examples.todo-list.v1+json
 schemes:
 - http
-- https
 paths:
   /:
     get:

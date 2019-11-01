@@ -1,18 +1,21 @@
-consumes:
-- application/json
+swagger: "2.0"
 info:
-  title: Go Swagger Example
-  version: 0.1.0
+  description: From the todo list tutorial on goswagger.io
+  title: A Todo list application
+  version: 1.0.0
+consumes:
+- application/io.goswagger.examples.todo-list.v1+json
 produces:
-- application/json
+- application/io.goswagger.examples.todo-list.v1+json
 schemes:
 - http
-swagger: "2.0"
+- https
 paths:
-  /items:
+  /:
     get:
       tags:
         - todos
+      operationId: findTodos
       parameters:
         - name: since
           in: query
@@ -37,18 +40,55 @@ paths:
     post:
       tags:
         - todos
+      operationId: addOne
       parameters:
-        - name: item
+        - name: body
           in: body
           schema:
-            $ref: '#/definitions/item'
+            $ref: "#/definitions/item"
       responses:
-        200:
-          description: Success
+        201:
+          description: Created
+          schema:
+            $ref: "#/definitions/item"
+        default:
+          description: error
           schema:
             $ref: "#/definitions/error"
+  /{id}:
+    parameters:
+      - type: integer
+        format: int64
+        name: id
+        in: path
+        required: true
+    put:
+      tags:
+        - todos
+      operationId: updateOne
+      parameters:
+        - name: body
+          in: body
+          schema:
+            $ref: "#/definitions/item"
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/item"
         default:
-          description: Error
+          description: error
+          schema:
+            $ref: "#/definitions/error"
+    delete:
+      tags:
+        - todos
+      operationId: destroyOne
+      responses:
+        204:
+          description: Deleted
+        default:
+          description: error
           schema:
             $ref: "#/definitions/error"
 definitions:
